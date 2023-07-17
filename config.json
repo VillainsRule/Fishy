@@ -1,0 +1,68 @@
+{
+  "discord": {
+    "statuses": ["invisible", "dnd", "idle", "online"],
+    "loginDelay": 1500
+  },
+
+  "dashboard": {
+    "port": 42002
+  },
+
+  "advancedLogging": true,
+
+  "disableTips": true,
+
+  "autoDaily": true,
+  "autoBuy": {
+    "rods": true,
+    "bait": {
+      "active": true,
+      "minAmount": 200,
+      "maxAmount": 500,
+      "preferred": "Worms"
+    },
+    "boats": true
+  },
+  "autoSell": true,
+  "autoClan": {
+    "enabled": true,
+    "descriptions": [
+      "hi",
+      "this is a clan",
+      "very cool clan",
+      "trust me very cool clan"
+    ]
+  },
+  "autoBoost": {
+    "enabled": true,
+    "purchaseOrder": [
+      "Fish Boost (20m)",
+      "Treasure Boost (20m)",
+      "Worker (30m)",
+      "Fish Boost (5m)",
+      "Treasure Boost (5m)",
+      "Worker (10m)"
+    ]
+  },
+
+  "delays": {
+    "buttonClickDelay": {
+      "min": 500,
+      "max": 750
+    },
+    "shortBreak": {
+      "min": 45000,
+      "max": 75000,
+      "frequency": 0.0005
+    },
+    "longBreak": {
+      "min": 125000,
+      "max": 175000,
+      "frequency": 0.0001
+    },
+    "commandInterval": {
+      "min": 3000,
+      "max": 3250
+    }
+  }
+}
