@@ -22,7 +22,7 @@ console.log(chalk.redBright(
   })
 ));
 console.log(chalk.hex('#FFA500')(`╰ Running version ${chalk.bold(`${version}, ${versionNotes}`)}`))
-console.log(chalk.hex('#FFA500')(`╰ Built by thonk (discord @iamthonk)`))
+console.log(chalk.hex('#FFA500')(`╰ Built by thonk (discord @xthonk)`))
 console.log(chalk.yellowBright(`╰ Join our Discord for support: ${chalk.bold('https://discord.gg/AwzRJcN6By')}\n`))
 
 if (process.version.match(/^v(\d+\.\d+)/)[1] < 20) log(chalk.redBright('You are running a NodeJS version under v20. If you don\'t upgrade, you may get large lag spikes or ram overloads.'))
