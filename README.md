@@ -1,5 +1,5 @@
 <div align="center">
-  <img src="https://media.discordapp.net/attachments/1048078154234859660/1126622223998918697/fishybanner.png">
+  <img src="https://i.imgur.com/XP2BohW.png">
   <p>join our <a href="https://discord.gg/AwzRJcN6By">discord</a> if you're cool :)</p>
   <hr>
   <h2>Features</h2>
