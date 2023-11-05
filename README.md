@@ -1,6 +1,6 @@
 <div align="center">
   <img src="https://i.imgur.com/XP2BohW.png">
-  <p>join our <a href="https://discord.gg/AwzRJcN6By">discord</a> if you're cool :)</p>
+  <p>made with ❤️ by <b>@xthonk</b></p>
   <hr>
   <h2>Features</h2>
 </div>
