@@ -1,0 +1,225 @@
+@import url("https://fonts.googleapis.com/css2?family=Comfortaa&display=swap");
+
+* {
+    padding: 0;
+    margin: 0;
+    font-family: 'Comfortaa';
+    color: white;
+}
+
+body {
+    background: radial-gradient(at center, rgb(0 217 255) 0%, rgb(21 122 202) 100%);
+}
+
+.waves {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    z-index: -99;
+    max-height: 50%;
+}
+
+nav {
+    width: 100%;
+    height: 15vh;
+    display: flex;
+    background-color: rgba(0, 0, 0, 0.75);
+    border-radius: 0 0 3vh 3vh;
+    position: absolute;
+    left: 0;
+    top: 0;
+    align-items: center;
+}
+
+.headername {
+    position: absolute;
+    height: 10vh;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.icon {
+    margin-left: 5%;
+    height: 100%;
+    border-radius: 5px;
+}
+
+.title {
+    margin-left: 15px;
+    font-size: 6vh;
+}
+
+.desc {
+    margin-left: 15px;
+    white-space: nowrap;
+}
+
+.ss {
+    height: 10vh;
+    width: 160px;
+    background: rgba(0, 0, 0, 0.2);
+    border: 0;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: 0.5s;
+}
+
+.ss:hover {
+    transform: scale(0.9);
+}
+
+.support {
+    position: absolute;
+    right: 15px;
+}
+
+.container-holder {
+    display: flex;
+    flex-direction: row;
+    gap: 10%;
+    height: 65%;
+    margin-top: 12%;
+    padding: 0;
+    width: 86%;
+    margin-left: 7%;
+    transition: 2s;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    opacity: 0.8;
+    background-color: black;
+    width: 45%;
+    border-radius: 5vh;
+    text-align: center;
+    overflow: scroll;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
+.container::-webkit-scrollbar {
+    display: none;
+}
+
+h1 {
+    margin-top: 3vh;
+    font-size: 2.5em;
+}
+
+h2 {
+    font-size: 1.7em;
+    margin-top: 3vh;
+}
+
+.totalbal {
+    margin-top: 1vh;
+}
+
+.itemnm {
+    font-size: 1.5em;
+}
+
+.itemnm2 {
+    font-size: 2.5vh;
+}
+
+.userbal {
+    margin-top: 2vh;
+    font-size: 3vh;
+}
+
+.logs {
+    font-size: 18px;
+    line-height: 30px;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+@media only screen and (max-width: 1000px) {
+    .container-holder {
+        margin-top: 17%;
+    }
+}
+
+@media only screen and (max-width: 750px) {
+    .container-holder {
+        margin-top: 25%;
+    }
+}
+
+@media only screen and (max-width: 700px) {
+    .container-holder {
+        margin-top: 25%;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .container-holder {
+        margin-top: 30%;
+    }
+
+    .desc {
+        display: none;
+    }
+
+    .container-holder {
+        flex-direction: column;
+    }
+
+    .container {
+        width: 100%;
+    }
+
+    nav {
+        height: 22vh;
+        justify-content: center;
+        flex-direction: row;
+        gap: 10vw;
+    }
+
+    .support {
+        position: initial;
+    }
+
+    .headername {
+        position: initial;
+    }
+}
+
+@media only screen and (max-width: 550px) {
+    .container-holder {
+        margin-top: 35%;
+    }
+}
+
+@media only screen and (max-width: 470px) {
+    .container-holder {
+        margin-top: 40%;
+    }
+}
+
+@media only screen and (max-width: 400px) {
+    .ss {
+        display: none;
+    }
+
+    nav {
+        height: 18vh;
+    }
+}
+
+@media only screen and (max-width: 325px) {
+    .container-holder {
+        margin-top: 52%;
+    }
+}
+
+@media only screen and (max-width: 325px) {
+    .container-holder {
+        margin-top: 58%;
+    }
+}

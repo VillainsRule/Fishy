@@ -1,0 +1,104 @@
+<html lang="en">
+
+    <head>
+        <link rel="shortcut icon" href="https://i.imgur.com/BNTkb9E.png" type="image/x-icon">
+        <title>Fishy: the Virtual Fisher selfbot.</title>
+        <link rel="stylesheet" href="./web.css">
+    </head>
+
+    <body>
+        <nav>
+            <div class="headername">
+                <img class="icon" src="https://i.imgur.com/BNTkb9E.png" alt="Fishy Logo" />
+                <span class="title">Fishy</span>
+                <span class="desc">Virtual Fisher Bot<br>Built by @xthonk :)</span>
+            </div>
+
+            <div class="support">
+                <a href="https://github.com/VillainsRule/Fishy" target="_blank" rel="noopener noreferrer">
+                    <button class="ss">Github</button>
+                </a>
+            </div>
+        </nav>
+
+        <div class="container-holder">
+            <div class="container">
+                <h1>Balance</h1>
+                <h2>Total:</h2>
+                <div class="totalbal">
+                    <text class="itemnm">Total Cash: </text>
+                    <text class="itemnm" id="money">...</text>
+                    <br>
+                    <text class="itemnm">Total Level: </text>
+                    <text class="itemnm" id="level">...</text>
+                    <br>
+                    <text class="itemnm">Banned: </text>
+                    <text class="itemnm" id="banned">...</text>
+                    <br>
+
+                </div>
+                <h2>Individual:</h2>
+                <div class="indivbal">
+                </div>
+                <br>
+                <br>
+            </div>
+
+            <div class="container">
+                <h1>Logs</h1>
+                <br>
+                <div class="logs"></div>
+            </div>
+        </div>
+
+        <img class="waves" src="https://i.giphy.com/media/i4GINnCIFD7i727t0N/giphy.webp">
+
+        <script src="/socket.io/socket.io.js"></script>
+        <script>
+            let socket = io();
+
+            socket.on('balanceUpdate', (data) => {
+                let money = 0;
+                let lvl = 0;
+                let count = 0;
+                let banned = 0;
+
+                Object.values(data).forEach((value) => {
+                    money += value.balance;
+                    lvl += value.level;
+                    count++;
+                    if (value.banned) banned++;
+                });
+
+                document.querySelector('#money').innerText = money.toLocaleString();
+                document.querySelector('#level').innerText = lvl.toLocaleString();
+                document.querySelector('#banned').innerText = banned.toLocaleString() + ' / ' + count.toLocaleString();
+
+                document.querySelector('.indivbal').innerHTML = '';
+                Object.entries(data).forEach((item) => {
+                    document.querySelector('.indivbal').innerHTML += `
+                        <div class="userbal">
+                            @${item[1].username}:<br>
+                            <div class="totalbal">
+                                <text class="itemnm2">Cash:</text>
+                                <text class="itemnm2">${item[1].balance}</text>
+                                <text class="itemnm2">| Level:</text>
+                                <text class="itemnm2">${item[1].level}</text>
+                                <text class="itemnm2">| Banned:</text>
+                                <text class="itemnm2">${item[1].banned}</text>
+                            </div>
+                        </div>
+                    `;
+                });
+            });
+
+            socket.on('logs', (logs) => {
+                document.querySelector('.logs').innerHTML = '';
+                logs.forEach(a => document.querySelector('.logs').innerHTML += a + '<br><br>');
+            });
+
+            socket.on('log', (log) => document.querySelector('.logs').innerHTML += log + '<br><br>');
+        </script>
+    </body>
+
+</html>
